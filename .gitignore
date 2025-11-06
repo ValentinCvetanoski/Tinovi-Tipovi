@@ -1,0 +1,29 @@
+# === Node / React (frontend) ===
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.DS_Store
+frontend/.vite/
+frontend/.eslintcache
+
+# === Python / Flask (backend) ===
+backend/__pycache__/
+backend/.env
+backend/venv/
+backend/*.pyc
+backend/*.pyo
+backend/.DS_Store
+
+# === General OS junk ===
+.DS_Store
+Thumbs.db
+
+# === VSCode / IDE metadata ===
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# === Logs / temporary files ===
+*.log
+*.tmp
