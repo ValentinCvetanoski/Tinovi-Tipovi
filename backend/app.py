@@ -1,11 +1,14 @@
 from flask import Flask, jsonify
+from flask_cors import CORS
 import datetime
 import requests
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
+
 app = Flask(__name__)
+CORS(app)
 
 # === CONFIG ===
 ODDS_API_KEY = os.getenv("ODDS_API_KEY")
