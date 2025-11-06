@@ -5,8 +5,9 @@ export default function App() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    axios.get("https://https://tinovi-tipovi.onrender.com/tips").then((res) => setData(res.data));
-  }, []);
+  axios.get(`${import.meta.env.VITE_API_URL}/tips`)
+       .then((res) => setData(res.data));
+}, []);
   if (!data) return <p>Loading tips...</p>;
 
   const renderCategory = (title, list) => (
