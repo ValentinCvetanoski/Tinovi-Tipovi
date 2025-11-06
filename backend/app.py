@@ -1,12 +1,14 @@
 from flask import Flask, jsonify
 import datetime
 import requests
+from dotenv import load_dotenv
 
+load_dotenv()
 app = Flask(__name__)
 
 # === CONFIG ===
-ODDS_API_KEY = "309236596053ea0dbb33cc5cbe382b25"
-API_FOOTBALL_KEY = "11d4bb3e5c6dff2b12eed80ed941a440"
+ODDS_API_KEY = os.getenv("ODDS_API_KEY")
+API_FOOTBALL_KEY = os.getenv("API_FOOTBALL_KEY")
 SPORT = "upcoming"
 REGION = "eu"
 
