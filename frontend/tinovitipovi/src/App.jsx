@@ -5,10 +5,12 @@ export default function App() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-  axios.get(`${import.meta.env.VITE_API_URL}tips`)
-       .then((res) => setData(res.data));
-}, []);
-  if (!data) return <p>Loading tips...</p>;
+    axios
+      .get("https://tinovi-tipovi.onrender.com/tips")
+      .then((res) => setData(res.data));
+  }, []);
+
+  if (!data) return <p>POCEKAJ TRO IMAT REDICA EVROTIP</p>;
 
   const renderCategory = (title, list) => (
     <div style={{ marginBottom: "2rem" }}>
@@ -43,9 +45,9 @@ export default function App() {
   return (
     <div style={{ padding: "2rem" }}>
       <h1>Football Betting Tips</h1>
-      {renderCategory("Safe Bets (1.5 - 1.8)", data.safe)}
-      {renderCategory("Risky Bets (2.0 - 3.0)", data.risky)}
-      {renderCategory("Big Bombs (3+)", data.bomb)}
+      {renderCategory("SIGURICI BATA", data.safe)}
+      {renderCategory("OVA RIZICNO MALU", data.risky)}
+      {renderCategory("NA GOLOJ A?", data.overunder)}
     </div>
   );
 }
