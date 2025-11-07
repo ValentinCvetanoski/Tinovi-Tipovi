@@ -21,10 +21,11 @@ export default function App() {
         <table border="1" cellPadding="6">
           <thead>
             <tr>
-              <th>Match</th>
-              <th>Kickoff</th>
-              <th>Tip</th>
-              <th>Odds</th>
+              <th>UTAKMICA</th>
+              <th>POCETOK</th>
+              <th>TIPUVAM</th>
+              <th>KOEFICIENT</th>
+              <th>SHANSI ZA PROLAZ</th>
             </tr>
           </thead>
           <tbody>
@@ -34,6 +35,7 @@ export default function App() {
                 <td>{g.kickoff}</td>
                 <td>{g.tip}</td>
                 <td>{g.odds.toFixed(2)}</td>
+                <td>{g.probability}</td>
               </tr>
             ))}
           </tbody>
@@ -44,10 +46,10 @@ export default function App() {
 
   return (
     <div style={{ padding: "2rem" }}>
-      <h1>Football Betting Tips</h1>
+      <h1>TINOVI TIPOVI SIGURNA ZARABOTKA ZA OPASNI KOCKARI!</h1>
       {renderCategory("SIGURICI BATA", data.safe)}
       {renderCategory("OVA RIZICNO MALU", data.risky)}
-      {renderCategory("NA GOLOJ A?", data.overunder)}
+      {renderCategory("TRI PLUS SAMO BAKI A? MOJ COEK", data.overunder)}
     </div>
   );
 }
